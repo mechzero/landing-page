@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "live-server --port=3000 --open=src"
+    "start": "live-server --port=3000 src"
   },
   "author": "",
   "license": "ISC",
