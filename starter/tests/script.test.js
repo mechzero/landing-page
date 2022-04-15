@@ -5,37 +5,37 @@ describe("Cart Functionality Tests", () => {
     let cartArr = cart.cartArr;
 
     test("addToCart adds product to cart", () => {
-        cart.addToCart(product1.sku); 
+        cart.addToCart(product1.SKU); 
         expect(product1.quantity).toEqual(1);
         expect(cartArr).toEqual([product1]);
     })
     test("addToCart a second time does not append the item twice", () => {
-        cart.addToCart(product1.sku); 
+        cart.addToCart(product1.SKU); 
         expect(product1.quantity).toEqual(2);
         expect(cartArr).toEqual([product1]);
     })
     test("increase product quantity", () => {
-        cart.increase(product1.sku); 
+        cart.increase(product1.SKU); 
         expect(product1.quantity).toEqual(3);
     })
     test("increase a second time", () => {
-        cart.increase(product1.sku); 
+        cart.increase(product1.SKU); 
         expect(product1.quantity).toEqual(4);
     })
     test("decrease quantity from 4 to 1 items", () => {
-        cart.decrease(product1.sku);
-        cart.decrease(product1.sku);
-        cart.decrease(product1.sku); 
+        cart.decrease(product1.SKU);
+        cart.decrease(product1.SKU);
+        cart.decrease(product1.SKU); 
         expect(product1.quantity).toEqual(1);
     })
     test("decrease quantity from 1 to 0 removes item from cart", () => {
-        cart.decrease(product1.sku); 
+        cart.decrease(product1.SKU); 
         expect(product1.quantity).toEqual(0);
         expect(cartArr).toEqual([]);
     })
     test("remove 1 item from cart updates quantity to 0 and removes from cart", () => {
-        cart.addToCart(product1.sku); 
-        cart.remove(product1.sku);
+        cart.addToCart(product1.SKU); 
+        cart.remove(product1.SKU);
         expect(product1.quantity).toEqual(0);
         expect(cartArr).toEqual([]);
     })
@@ -63,9 +63,9 @@ describe("Checkout Functionality Tests", () => {
     }
     
     test("cartTotal gets grand total of cart", () =>{
-        cart.addToCart(product1.sku);
-        cart.addToCart(product2.sku);
-        cart.increase(product1.sku);
+        cart.addToCart(product1.SKU);
+        cart.addToCart(product2.SKU);
+        cart.increase(product1.SKU);
         expect(cart.cartTotal()).toEqual(grandTotal());
     })
 
@@ -74,8 +74,8 @@ describe("Checkout Functionality Tests", () => {
     })
 
     test("pay less than the total works", () =>{
-        cart.addToCart(product1.sku);
-        cart.addToCart(product2.sku);
+        cart.addToCart(product1.SKU);
+        cart.addToCart(product2.SKU);
         expect(cart.pay(1)).toBeLessThan(grandTotal());
     })
 })

@@ -3,7 +3,7 @@
    - name: name of product (string)
    - price: price of product (number)
    - quantity: quantity in cart (integer)
-   - sku: unique id for product (number)
+   - SKU: unique id for product (number)
    - image: picture of product (url string)
 */
 
@@ -24,31 +24,31 @@
 // Most recent product interacted with
 
 
-// Gets the product from the sku received from the frontend
+// Gets the product from the SKU received from the frontend
 
 
-/* Create a function named addToCart that takes in the product sku as an argument
-  - addToCart should get the correct product based on the sku
+/* Create a function named addToCart that takes in the product SKU as an argument
+  - addToCart should get the correct product based on the SKU
   - addToCart should then increase the product's quantity
   - if the product is not already in the cart, add it to the cart
 */
 
 
-/* Create a function named increase that takes in the product sku as an argument
-  - increase should get the correct product based on the sku
+/* Create a function named increase that takes in the product SKU as an argument
+  - increase should get the correct product based on the SKU
   - increase should then increase the product's quantity
 */
 
 
-/* Create a function named decrease that takes in the product sku as an argument
-  - decrease should get the correct product based on the sku
+/* Create a function named decrease that takes in the product SKU as an argument
+  - decrease should get the correct product based on the SKU
   - decrease should decrease the quantity of the product
   - if the function decreases the quantity to 0, the product is removed from the cart
 */
 
 
-/* Create a function named remove that takes in the product sku as an argument
-  - remove should get the correct product based on the sku
+/* Create a function named remove that takes in the product SKU as an argument
+  - remove should get the correct product based on the SKU
   - remove should update the product quantity to 0
   - remove should remove the product from the cart
 */

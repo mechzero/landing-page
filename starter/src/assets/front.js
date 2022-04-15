@@ -7,7 +7,7 @@ function drawProducts() {
     let productItems = '';
     productsArr.forEach(element => {
         productItems +=`
-            <div data-sku='${element.sku}'>
+            <div data-SKU='${element.SKU}'>
                 <img src='${element.image}'>
                 <h3>${element.name}</h3>
                 <p>price: ${currencySymbol}${element.price}</p>
@@ -28,7 +28,7 @@ function drawCart() {
         let itemTotal = element.price * element.quantity;
 
         cartItems +=`
-            <div data-sku='${element.sku}'>
+            <div data-SKU='${element.SKU}'>
                 <h3>${element.name}</h3>
                 <p>price: ${currencySymbol}${element.price}</p>
                 <p>quantity: ${element.quantity}</p>
@@ -62,9 +62,9 @@ drawCart();
 drawCheckout();
 
 document.querySelector('.products').addEventListener('click', (e) => {
-    let productSku = e.target.parentNode.getAttribute('data-sku');
-    productSku *= 1;
-    addToCart(productSku);     
+    let productSKU = e.target.parentNode.getAttribute('data-SKU');
+    productSKU *= 1;
+    addToCart(productSKU);     
     drawCart();
     drawCheckout();
 })
@@ -77,12 +77,12 @@ document.querySelector('.cart').addEventListener('click', (e) => {
     // Must be nested to have access to the event target
     // Takes in a cart function as an agrument
     function runCartFunction(fn) {
-        let productSku = e.target.parentNode.getAttribute('data-sku');
-        productSku *= 1;
+        let productSKU = e.target.parentNode.getAttribute('data-SKU');
+        productSKU *= 1;
         for (let i = cartArr.length - 1; i > -1; i--) {
-            if (cartArr[i].sku === productSku) {
-                let sku = cartArr[i].sku;
-                fn(sku);
+            if (cartArr[i].SKU === productSKU) {
+                let SKU = cartArr[i].SKU;
+                fn(SKU);
             }
         }
         // force cart and checkout redraw after cart function completes
@@ -165,7 +165,7 @@ document.querySelector('.pay').addEventListener('click', (e) => {
 //     let select = document.createElement("select");
 //     select.classList.add("currency-select");
 //     select.innerHTML = `<option value="USD">USD</option>
-//                         <option value="EURO">EURO</option>
+//                         <option value="EUR">EUR</option>
 //                         <option value="YEN">YEN</option>`;
 //     currencyPicker.append(select);
 // }
@@ -173,7 +173,7 @@ document.querySelector('.pay').addEventListener('click', (e) => {
 
 // document.querySelector('.currency-select').addEventListener('change', function handleChange(event) {
 //     switch(event.target.value){
-//         case 'EURO':
+//         case 'EUR':
 //             currencySymbol = '€';
 //             break;
 //         case 'YEN':
