@@ -58,6 +58,9 @@ You will see a new folder has been created named `node_modules`. You can ignore 
 ### Accesing the working files
 
 You will be doing all of your work in `script.js`, which is inside the `starter/src/assets` folder. The starter code file structure looks like this:
+
+***Starter Code***
+```bash
 ├── src
 │ ├── assets
 │ │ ├── front.js
@@ -72,6 +75,7 @@ You will be doing all of your work in `script.js`, which is inside the `starter/
 │ └── script.test.js
 ├── package.json
 └── package-lock.json
+```
 
 ## Running the Live Server
 
