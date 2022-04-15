@@ -64,7 +64,7 @@ You will be doing all of your work in `script.js`, which is inside the `starter/
 ├── src
 │ ├── assets
 │ │ ├── front.js
-│ │ ├── script.js <--- **_Where you will be doing your work_**
+│ │ ├── script.js <--- Where you will be doing your work
 │ │ └── styles.css
 │ ├── images
 │ │ ├── cherry.jpg
