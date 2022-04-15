@@ -63,7 +63,7 @@ npm run start
 
 Once you have entered this code, the live server will continue to run. If you would like to stop the server, type **[control] [c]**. You will see the terminal window exit the live server.
 
-### Using Jest to test your code
+## Using Jest to test your code
 
 Jest is a testing framework for JavaScript. Small, [unit tests](https://en.wikipedia.org/wiki/Unit_testing) are written to check the pieces of functionality of an application. Tests are typically written first and then code is written to make them pass. You have the option of taking advantage or prewritten unit tests. To run the tests enter the following code into your terminal application or the terminal workspace pane:
 
