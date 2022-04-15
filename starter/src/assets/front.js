@@ -13,7 +13,7 @@ function drawProducts() {
                 <p>price: ${currencySymbol}${element.price}</p>
                 <button class="add-to-cart">Add to Cart</button>
             </div>
-        `
+        `;
     });
     // use innerHTML so that products only drawn once
     productList.innerHTML = productItems;
@@ -37,7 +37,7 @@ function drawCart() {
                 <button class="qdown">-</button>
                 <button class="remove">remove</button>
             </div>
-        `
+        `;
     });
      // use innerHTML so that cart products only drawn once
     cartArr.length ? cartList.innerHTML = cartItems : cartList.innerHTML = 'Cart Empty';
@@ -52,8 +52,8 @@ function drawCheckout() {
     let cartSum = cartTotal();
 
     let div = document.createElement("div");
-    div.innerHTML =`<p>Cart Total: ${currencySymbol}${cartSum}`
-    checkout.append(div)
+    div.innerHTML =`<p>Cart Total: ${currencySymbol}${cartSum}`;
+    checkout.append(div);
 }
 
 // Initialize store with products, cart, and checkout
@@ -87,19 +87,19 @@ document.querySelector('.cart').addEventListener('click', (e) => {
         }
         // force cart and checkout redraw after cart function completes
         drawCart();
-        drawCheckout()
+        drawCheckout();
     }
 
     // check the target's class and run function based on class
     if (e.target.classList.contains('remove')){
         // run remove() from script.js
-        runCartFunction(remove)
+        runCartFunction(remove);
     } else if (e.target.classList.contains('qup')){
         // run increase() from script.js
-        runCartFunction(increase)
+        runCartFunction(increase);
     } else if (e.target.classList.contains('qdown')){
         // run decrease() from script.js
-        runCartFunction(decrease)
+        runCartFunction(decrease);
     } 
 })
 
@@ -108,7 +108,7 @@ document.querySelector('.pay').addEventListener('click', (e) => {
 
     // Get input cash received field value, set to number
     let amount = document.querySelector('.received').value;
-    amount *= 1
+    amount *= 1;
 
     // Set cashReturn to return value of pay()
     let cashReturn = pay(amount);
@@ -123,7 +123,7 @@ document.querySelector('.pay').addEventListener('click', (e) => {
             <p>Cash Received: ${currencySymbol}${amount}</p>
             <p>Cash Returned: ${currencySymbol}${cashReturn}</p>
             <p>Thank you!</p>
-        `
+        `;
     } else {
         // reset cash field for next entry
         document.querySelector('.received').value = ''; 
@@ -132,7 +132,7 @@ document.querySelector('.pay').addEventListener('click', (e) => {
             <p>Remaining Balance: ${cashReturn}$</p>
             <p>Please pay additional amount.</p>
             <hr/>
-        `
+        `;
     }
 
     paymentSummary.append(div);
@@ -152,7 +152,9 @@ document.querySelector('.pay').addEventListener('click', (e) => {
 
 // document.querySelector('.empty-btn').addEventListener('click', (e) => {
 //     if (e.target.classList.contains('empty')){
-//         emptyCart()
+//         emptyCart();
+//         drawCart();
+//         drawCheckout();
 //     }
 // })
 /* End all items from cart */
@@ -178,6 +180,7 @@ document.querySelector('.pay').addEventListener('click', (e) => {
 //             currencySymbol = '¥';
 //             break;
 //         default:
+//             currencySymbol = '$';
 //             break;
 //      }
 
