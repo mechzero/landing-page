@@ -1,26 +1,28 @@
 # Shopping Cart Functionality
 
-You will be creating the core functionality used for a storefront application. The visual of the storefront as well as the JavaScript necessary to connect the code you will write, to that visual have already been created. 
+You will be creating the core functionality used for a storefront application. The visual of the storefront as well as the JavaScript necessary to connect the code you will write, to that visual have already been created.
 
-Shopping carts are a fantastic tool to practice JavaScript fundamentals. 
-
+Shopping carts are a fantastic tool to practice JavaScript fundamentals.
 
 ## Getting Started
 
 There are two ways you can work locally. You can ignore all the excess files and strictly work within the src file. Or, you can take advantage of the live server and tests to improve your experience.
 
 To get the starter repository you can either:
+
 - Download the project from GitHub by clicking on the green button and selecting download (this is easiest!)
-- Forking the repository and then clone it to your local machine (see info on forking in the GitHub documentation: [Fork a repo](https://docs.github.com/en/github-ae@latest/get-started/quickstart/fork-a-repo).  
+- Forking the repository and then clone it to your local machine (see info on forking in the GitHub documentation: [Fork a repo](https://docs.github.com/en/github-ae@latest/get-started/quickstart/fork-a-repo).
 
 ### [Optional] Forking and Cloning
-To fork the repository, click the "Fork" button at the top right corner of the repository page. Once forked, view the repository under your repositories. Clone the your repository to your local machine by running: 
+
+To fork the repository, click the "Fork" button at the top right corner of the repository page. Once forked, view the repository under your repositories. Clone the your repository to your local machine by running:
 
 ```bash
 git clone path/to/your/GitHub/repository
 ```
 
 ### Installing Node
+
 If you would like to take advantage of the live server and/or the tests, you must have node.js installed on your system.
 
 To check if you already have Node.js installed, open your terminal application and run the following code:
@@ -34,22 +36,42 @@ If Node.js is installed, a version will be returned--something like `v16.14.2`.
 If Node.js is not installed, you can install it from their website: <a href="https://nodejs.org/en/" target="_blank">Nodejs.org</a>. Make sure to select the **LTS**, "Recommended for most users," version.
 
 ### Accessing the Working Directory
-Once Node.js is installed, you will need to change your working directory to your project's directory which is the `starter` folder in this repo. If using a tool like Visual Studio Code, the terminal window will automatically place you in your project folder. If using your terminal application, type `cd`  then drag the root project folder onto the terminal pane and hit [**enter**]. The result should be something similar to the following:
+
+Once Node.js is installed, you will need to change your working directory to your project's directory which is the `starter` folder in this repo. If using a tool like Visual Studio Code, the terminal window will automatically place you in your project folder. If using your terminal application, type `cd` then drag the root project folder onto the terminal pane and hit [**enter**]. The result should be something similar to the following:
 
 ```bash
-$ cd /Users/username/Documents/cd2073-intro-to-js-1-project-starter/starter 
+$ cd /Users/username/Documents/cd2073-intro-to-js-1-project-starter/starter
 ```
 
 The path you enter will differ from the above but do note the space between `cd` and the start of the path.
 
 ### Install Dependencies
-Once in the working directory, you need to add all of the node.js dependencies for the live server and Jest to work. Anytime we download a Node.js project, this is the first step we take. 
+
+Once in the working directory, you need to add all of the node.js dependencies for the live server and Jest to work. Anytime we download a Node.js project, this is the first step we take.
 
 ```bash
 npm install
 ```
 
-You will see a new folder has been created named `node_modules`.  You can ignore this folder. Just know it holds all the stuff that makes the live server and Jest work, and that it's pretty huge. Because of its size, we don't push it or pull it from repositories. We just rebuild it by running the following command.
+You will see a new folder has been created named `node_modules`. You can ignore this folder. Just know it holds all the stuff that makes the live server and Jest work, and that it's pretty huge. Because of its size, we don't push it or pull it from repositories. We just rebuild it by running the following command.
+
+### Accesing the working files
+
+You will be doing all of your work in `script.js`, which is inside the `starter/src/assets` folder. The starter code file structure looks like this:
+├── src
+│ ├── assets
+│ │ ├── front.js
+│ │ ├── script.js <--- **_Where you will be doing your work_**
+│ │ └── styles.css
+│ ├── images
+│ │ ├── cherry.jpg
+│ │ ├── orange.jpg
+│ │ └── strawberry.jpg
+│ └── index.html
+├── tests
+│ └── script.test.js
+├── package.json
+└── package-lock.json
 
 ## Running the Live Server
 
@@ -74,32 +96,31 @@ npm run test
 When the tests run, you will see a bunch of information come up in the terminal pane. It will look something like this. On the left, you can see the tests failing, on the right you can see the tests passing.
 ![Jest results](https://video.udacity-data.com/topher/2022/April/62506d85_tests/tests.jpg)
 
-
 ## Project Instructions
 
-Step 1: Review the Starter Code  
-Step 2: Build the Products  
-Step 3: Create the Cart Functionality  
-* `addToCart()`
-* `increase()`
-* `decrease()`
-* `remove()`  
+Step 1: Review the Starter Code
+Step 2: Build the Products
+Step 3: Create the Cart Functionality
 
-Step 4: Create the Checkout Functionality  
-* `cartTotal()` 
-* `pay()`  
+- `addToCart()`
+- `increase()`
+- `decrease()`
+- `remove()`
 
-Step 5: REFACTOR!  
-Step 6: Re-test the User Interface  
-[Optional] Add Extra Features  
+Step 4: Create the Checkout Functionality
 
+- `cartTotal()`
+- `pay()`
 
+Step 5: REFACTOR!
+Step 6: Re-test the User Interface
+[Optional] Add Extra Features
 
 ## Built With
 
-* Node.js (www.item1.com) - A JavaScript runtime for creating JavaScript servers
-* Live Server (https://www.npmjs.com/package/live-server) - Live reloading for your workspace
-* Jest (https://jestjs.io/) - A JavaScript testing framework
+- Node.js (www.item1.com) - A JavaScript runtime for creating JavaScript servers
+- Live Server (https://www.npmjs.com/package/live-server) - Live reloading for your workspace
+- Jest (https://jestjs.io/) - A JavaScript testing framework
 
 ## License
 
