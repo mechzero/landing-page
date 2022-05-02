@@ -1,5 +1,5 @@
 /* Create 3 or more product objects using object literal notation 
-   Each product should include four properties
+   Each product should include five properties
    - name: name of product (string)
    - price: price of product (number)
    - quantity: quantity in cart (integer)
@@ -89,5 +89,6 @@ module.exports = {
    cartTotal,
    pay, 
    emptyCart,
-   currency
+   /* Uncomment the following line if completing the currency converter bonus */
+   // currency
 }
