@@ -37,7 +37,7 @@ If Node.js is not installed, you can install it from their website: <a href="htt
 
 ### Accessing the Working Directory
 
-Once Node.js is installed, you will need to change your working directory to your project's directory which is the `starter` folder in this repo. If using a tool like Visual Studio Code, the terminal window will automatically place you in your project folder. If using your terminal application, type `cd` then drag the root project folder onto the terminal pane and hit [**enter**]. The result should be something similar to the following:
+Once Node.js is installed, you will need to change your working directory to your project's directory which is the `starter` folder in this repo - all the scripts, like npm start or npm test should run within the directory. If using a tool like Visual Studio Code, the terminal window will automatically place you in your project folder. If using your terminal application, type `cd` then drag the root project folder onto the terminal pane and hit [**enter**]. The result should be something similar to the following:
 
 ```bash
 $ cd /Users/username/Documents/cd2073-intro-to-js-1-project-starter/starter
@@ -59,7 +59,8 @@ You will see a new folder has been created named `node_modules`. You can ignore 
 
 You will be doing all of your work in `script.js`, which is inside the `starter/src/assets` folder. The starter code file structure looks like this:
 
-***Starter Code***
+**_Starter Code_**
+
 ```bash
 ├── src
 │ ├── assets
@@ -106,10 +107,10 @@ Step 1: Review the Starter Code
 Step 2: Build the Products
 Step 3: Create the Cart Functionality
 
-- `addToCart()`
-- `increase()`
-- `decrease()`
-- `remove()`
+- `addProductToCart()`
+- `increaseQuantity()`
+- `decreaseQuantity()`
+- `removeProductFromCart()`
 
 Step 4: Create the Checkout Functionality
 
