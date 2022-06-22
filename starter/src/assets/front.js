@@ -5,7 +5,7 @@ function drawProducts() {
     
     let productList = document.querySelector('.products');
     let productItems = '';
-    productsArr.forEach(element => {
+    products.forEach(element => {
         productItems +=`
             <div data-SKU='${element.SKU}'>
                 <img src='${element.image}'>
@@ -24,7 +24,7 @@ function drawCart() {
     let cartList = document.querySelector('.cart');
     // clear cart before drawing
     let cartItems = '';
-    cartArr.forEach(element => {
+    cart.forEach(element => {
         let itemTotal = element.price * element.quantity;
 
         cartItems +=`
@@ -40,7 +40,7 @@ function drawCart() {
         `;
     });
      // use innerHTML so that cart products only drawn once
-    cartArr.length ? cartList.innerHTML = cartItems : cartList.innerHTML = 'Cart Empty';
+    cart.length ? cartList.innerHTML = cartItems : cartList.innerHTML = 'Cart Empty';
 }
 
 // Draws checkout
@@ -64,7 +64,7 @@ drawCheckout();
 document.querySelector('.products').addEventListener('click', (e) => {
     let productSKU = e.target.parentNode.getAttribute('data-SKU');
     productSKU *= 1;
-    addToCart(productSKU);     
+    addProductToCart(productSKU);     
     drawCart();
     drawCheckout();
 })
@@ -79,9 +79,9 @@ document.querySelector('.cart').addEventListener('click', (e) => {
     function runCartFunction(fn) {
         let productSKU = e.target.parentNode.getAttribute('data-SKU');
         productSKU *= 1;
-        for (let i = cartArr.length - 1; i > -1; i--) {
-            if (cartArr[i].SKU === productSKU) {
-                let SKU = cartArr[i].SKU;
+        for (let i = cart.length - 1; i > -1; i--) {
+            if (cart[i].SKU === productSKU) {
+                let SKU = cart[i].SKU;
                 fn(SKU);
             }
         }
@@ -92,14 +92,14 @@ document.querySelector('.cart').addEventListener('click', (e) => {
 
     // check the target's class and run function based on class
     if (e.target.classList.contains('remove')){
-        // run remove() from script.js
-        runCartFunction(remove);
+        // run removeProductFromCart() from script.js
+        runCartFunction(removeProductFromCart);
     } else if (e.target.classList.contains('qup')){
-        // run increase() from script.js
-        runCartFunction(increase);
+        // run increaseQuantity() from script.js
+        runCartFunction(increaseQuantity);
     } else if (e.target.classList.contains('qdown')){
-        // run decrease() from script.js
-        runCartFunction(decrease);
+        // run decreaseQuantity() from script.js
+        runCartFunction(decreaseQuantity);
     } 
 })
 
