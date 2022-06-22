@@ -103,9 +103,9 @@ When the tests run, you will see a bunch of information come up in the terminal 
 
 ## Project Instructions
 
-Step 1: Review the Starter Code
-Step 2: Build the Products
-Step 3: Create the Cart Functionality
+Step 1: Review the starter code
+Step 2: Build the products
+Step 3: Create the cart functionality
 
 - `addProductToCart()`
 - `increaseQuantity()`
@@ -118,8 +118,12 @@ Step 4: Create the Checkout Functionality
 - `pay()`
 
 Step 5: REFACTOR!
-Step 6: Re-test the User Interface
-[Optional] Add Extra Features
+Step 6: Re-test the user interface
+Step 7: [Optional] Add extra features
+
+- Remove all items from the cart using an `emptyCart` function.
+- Integrate a currency switcher to switch between USD, EUR, and YEN.
+- Implement currency formatting to accomodate USD, EUR, and YEN.
 
 ## Built With
 
